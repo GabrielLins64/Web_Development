@@ -1,0 +1,60 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-family: Helvetica, Arial;
+}
+
+header, footer, nav, aside, article {
+	background-color: lightgrey;
+	border: 1px solid black;
+	padding: 1%;
+	position: relative;
+}
+
+body{ padding: 2% 10% 2% 10%; } /* Values respectively: top, right, bottom, left; */
+
+.bottom {
+	position: absolute;
+	bottom: 0;
+}
+
+.left {
+	position: absolute;
+	left: 0;
+}
+
+.right {
+	position: absolute;
+	right: 0;
+}
+
+.top {
+	position: absolute;
+	top: 0;
+}
+
+.center { text-align: center; }
+
+header { min-height: 150px; }
+
+div {
+	position: relative;
+	height: 300px;
+}
+
+article { width: 70%; }
+
+section {
+	margin: 5%;
+	margin-top: 2%;
+}
+
+aside { width: 23%; }
+
+p { padding: 1%; }
+
+span { padding-left: 1%; }
+
+

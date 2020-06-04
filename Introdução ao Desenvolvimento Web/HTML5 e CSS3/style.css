@@ -1,0 +1,154 @@
+/* 
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS saves a lot of work. It can control the layout of multiple web pages all at once
+External stylesheets are stored in CSS files
+*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Selectors: */
+/* In CSS, selectors are patterns used to select the element(s) you want to style. */
+/* Below, you can find selectors examples. */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* The selector below, star (*), select all elements of the page. */
+
+* {
+	margin: 0; /* Remove the margin from all elements of the page (including body) */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* The selector below its an element selector. It will edit the style
+   of all tags of the same kind (<hr>, in this case) on HTML file. */
+
+hr { 
+	border: 0px; /* Making the thematic breaks invisible */
+	margin: 5px;
+}
+h2 { 
+	color: #00FF00;
+	text-align: center;
+	letter-spacing: 1.5px;
+	margin: 10px;
+	text-shadow: 0 0 10px green;
+}
+p, h1, h2, h3, h4, h5, h6 { /* Default CSS values (necessary after reseting all margin of the page) */
+	display: block; 
+	margin-top: 1em; 
+	margin-bottom: 1em; 
+	margin-left: 0; 
+	margin-right: 0;
+}
+dd { 
+  display: block;
+  margin-left: 40px;
+}
+span {
+	color: yellow;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Selectors with attributes */
+
+a:link {color: blue} /* Unvisited link color */
+a:visited {color: purple;} /* Visited link color */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Classes selectors. Starts with a dot (.) */
+/* Classes can be used in multiple elements, and a element can use multiple classes. */
+/* Those can be called from a tag by using <tag class=".brasil_h1">, for instance. */
+
+.menu {
+	background-color: rgba(0,0,0,0.7);
+	height: 50px;
+	text-align: center;
+	padding: 30px 0 0 0;
+}
+.menu a { /* Edits the <a> selector only from the .menu classes */
+	border: 1px solid #00FF00;
+	border-radius: 10px;
+	padding: 8px 2% 8px 2%;
+	margin: 0 1% 0 1%;
+	text-decoration: none; /* Remove underlines */
+	background-color: black;
+	color: #00FF00;
+	font-weight: bold;
+}
+.menu a:hover { /* When the cursor goes on the selector */
+	background-color: #00FF00;
+	color: black;
+	border: 1px solid #00FF00;
+}
+.brasil_div {
+	width: 80%; /* Largura (manter percentual torna a página dinâmica no redimensionamento do browser) */ 
+	background-color: black; /* Cor do fundo (do div) */ 
+	margin: 5px auto 5px auto; /* Margem: Espaço externo entre o container e o que está fora; */ 
+	padding: 2%; /* Padding: Espaço interno entre o container e o que está dentro; */ 
+	padding-top: 0px; /* Ajusta o padding interno superior para nenhum (os headers já tem o próprio padding) */
+	border: 2px solid green; /* Borda do div */ 
+	border-radius: 16px; /* Raio da borda (quanto maior, mais redonda as bordas do div) */ 
+}
+.organized_text {
+	position: relative;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%, 0);
+	max-width: 80%;
+	text-align: justify;
+	text-indent: 4%;
+}
+.brasil_h3 {
+	color: lightgreen;
+	margin: 3%
+}
+.horizontally_centered {
+	position: relative;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%, 0);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* The selectors below, starting with a hashtag (#), stands for ids */
+/* Id's are unique elements. That is, each element can have only one ID and
+   each page can have only one element with that ID. */
+/* A tag can call an id by using <tag id="brasil_header">, for instance. */
+
+#brasil_header {
+	height: auto;
+	width: 50%; 
+	background-color: darkgreen; 
+	margin: 10px auto 10px auto; 
+	text-align: center;
+	padding: 5px 5px 5px 5px;
+	border: 3px solid gold;
+	border-radius: 32px;
+	box-shadow: 0px 0px 30px yellow;
+}
+#brasil_h1 {
+	color: #0000DD;
+	letter-spacing: 2px;
+	font-weight: 1000;
+	margin: 2% 0 0 0;
+	text-shadow: 0px 0px 3px white;
+}
+#normal_h2 {
+	color: #00FF00;
+	text-align: left;
+	margin: 0;
+	text-shadow: 0 0 0;
+}
+#rodape {
+	background-color: rgba(0,0,0,0.9);
+	position: relative;
+	height: 30px;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	padding-top: 1%;
+	margin-top: 20px;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

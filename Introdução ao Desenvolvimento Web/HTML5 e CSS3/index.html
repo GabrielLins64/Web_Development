@@ -1,0 +1,766 @@
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!DOCTYPE html> <!-- For html5 -->
+<!--
+All HTML documents must start with a <!DOCTYPE> declaration. The declaration is not an HTML tag. 
+It is an "information" to the browser about what document type to expect.
+-->
+
+<html lang="pt-br"> 
+<!-- 
+html tag represents the root of an HTML document. Is the container 
+for all	other HTML elements (except for the <!DOCTYPE> tag).
+*You should always include the lang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
+Attributes:
+	xmlns - Specifies the XML namespace attribute (If you need your content to conform to XHTML) 
+-->
+
+<head> 
+<!--
+The <head> element is a container for metadata (data about data) and is placed between the <html> 
+tag and the <body> tag. Metadata is data about the HTML document. Metadata is not displayed.
+Metadata typically define the document title, character set, styles, scripts, and other meta information.
+The following elements can go inside the <head> element:
+	<title> (required in every HTML document)
+	<style>
+	<base>
+	<link>
+	<meta>
+	<script>
+	<noscript>
+-->
+
+	<meta charset="utf-8">
+	<!-- 
+	The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
+	<meta> tags always go inside the <head> element, and are typically used to specify character set, 
+	page description, keywords, author of the document, and viewport settings.
+	Attributes:
+		charset: Specifies the character encoding for the HTML document
+		content: Specifies the value associated with the http-equiv or name attribute
+		http-equiv: Provides an HTTP header for the information/value of the content attribute
+		name: Specifies a name for the metadata
+
+	*The <meta> tag also supports the Global Attributes in HTML.
+	*The global attributes are listed in the end of this file.
+	-->
+	
+	<title> Página de Introdução ao HTML 5 </title>
+	<!-- 
+	The <title> tag is required in all HTML documents and it defines the title of the document. The 
+	contents of a page title is very important for search engine optimization (SEO)! The page title 
+	is used by search engine algorithms to decide the order when listing pages in search results.
+	The <title> element:
+		- defines a title in the browser toolbar
+		- provides a title for the page when it is added to favorites
+		- displays a title for the page in search-engine results
+	Here are some tips for creating good titles:
+		- Go for a longer, descriptive title (avoid one- or two-word titles)
+		- Search engines will display about 50-60 characters of the title, so try not to have titles longer than that
+		- Do not use just a list of words as the title (this may reduce the page's position in search results)
+	So, try to make the title as accurate and meaningful as possible! 
+	-->
+	
+	<style>
+	/*The <style> tag is used to define style information for an HTML document.
+	Inside the <style> element you specify how HTML elements should render in a browser.
+	Each HTML document can contain multiple <style> tags.
+	Attributes:
+		media: Specifies what media/device the media resource is optimized for
+		type: Specifies the media type of the <style> tag
+
+	*The <style> tag supports the Global Attributes and the Event Attributes in HTML.
+	Global Event Attributes:
+	HTML has the ability to let events trigger actions in a browser, like starting a JavaScript when a user 
+	clicks on an element. The Global Event Attributes are listed in the end of this file.*/
+		body { /* Formatting the body style */
+			background-image: url("Imagens/codebackground2.jpg"); /* Changes the background of the page to a image */
+			background-color: #2a2a2a; /* Background color become grey (If the image cannot be loaded) */ 
+			color: #00FF00; /* Text colors become green */ 
+		}
+
+	</style> <!-- It is good programming practice to place the style tag inside the header -->
+	<!-- 
+	*The best practice is to import the styles from a css file.
+	This can be accomplished by using the tag <link>.
+	The rest of the page formatting is imported in the command below, the css can be 
+	viewed in detail in the style.css file
+	-->
+	<link rel="stylesheet" href="style.css">
+	<!-- 
+	The <link> tag defines the relationship between the current document and an external resource. The <link> tag is most often used to link to external style sheets. The <link> element is an empty element, it contains attributes only.
+	*The link tag attributes can be seen in the end of this file.
+	-->
+
+</head>
+
+<body>
+<!-- 
+The <body> element contains all the contents of an HTML document, such as headings, paragraphs, images, 
+hyperlinks, tables, lists, etc. There can only be one <body> element in an HTML document.
+Supports Global and Event attributes.
+-->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<header id="brasil_header">
+
+	<h1 id="brasil_h1"> 
+
+		HTML 5 e CSS 3
+
+	</h1>
+
+	<p class="organized_text" style="color: yellow; max-width: 90%"> 
+	Esta página possui exemplos de códigos em HTML5, com seu respectivo resultado sendo exibido. Alguns detalhes
+	são explicados apenas nos comentários do código fonte da página ou, de maneira mais simples, observando-os clicando com o botão direito na sessão que deseja e selecionando "Inspecionar elemento". A grande maioria dos estilos CSS3 aplicados são explicados apenas nos comentários e no código "style.css", a sessão de CSS, disponível abaixo, explica em mais detalhes.
+	</p>
+	<!-- 
+	The <p> tag defines a paragraph. Browsers automatically add a single blank line before and after each <p> element. The <p> tag supports the Global Attributes and the Event Attributes.
+	-->
+
+</header>
+<!-- 
+The <header> element represents a container for introductory content or a set of navigational links.
+A <header> element typically contains:
+	- one or more heading elements (<h1> - <h6>)
+	- logo or icon
+	- authorship information
+Note: You can have several <header> elements in one HTML document. However, <header> cannot be placed within a <footer>, <address> or another <header> element.
+-->
+
+<hr> 
+<!--
+The <hr> tag defines a thematic break in an HTML page (e.g. a shift of topic).
+The <hr> element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page.
+-->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="menu"> 
+	
+	<a href="../index.html"> Home </a>
+	<a href="#"> HTML5 e CSS3 </a>
+	<a href="#"> JavaScript </a>
+	<a href="#"> PHP </a>
+
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+<!-- 
+The <div> tag defines a division or a section in an HTML document. The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The <div> tag is easily styled by using the class or id attribute. Any sort of content can be put inside the <div> tag! 
+Note: By default, browsers always place a line break before and after the <div> element.
+-->
+
+	<h2> Tags </h2>
+
+	<p class="organized_text">
+		Tags são elementos que definem um tipo de <i>container</i> com suas propriedades específicas (que podem ser editadas com CSS). Tags são inseridas, no código fonte da página, iniciando-se com um símbolo de menor que "&#x3C;", seguido do nome da tag e finalizando com o símbolo de maior que &#x3E;, ficando: <span>&#x3C;nome_da_tag&#x3E;</span>. Por exemplo, temos as tags <span>&#x3C;html&#x3E;</span>, <span>&#x3C;p&#x3E;</span>, <span>&#x3C;body&#x3E;</span> que representam, respectivamente, o início de um documento HTML (uma pagina web), um parágrafo, e o corpo da pagina. As tags terminam com os mesmos identificadores, mas inserindo-se uma barra "/" antes do nome da tag.<br> Exemplo: <span>&#x3C;tag&#x3E;</span> <span style="color: dodgerblue">conteúdo</span> <span>&#x3C;/tag&#x3E;</span>
+	</p>
+	<p class="organized_text">
+		Todo o conteúdo e outras tags que estiverem entre o início e término das tags, são parte interna destas e estão sujeitos às propriedades de estilo desta. Para descobrir mais tags e obter mais informações sobre estas, visualize o código fonte desta página.
+	</p>
+	
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+<!-- 
+The <div> tag defines a division or a section in an HTML document. The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The <div> tag is easily styled by using the class or id attribute. Any sort of content can be put inside the <div> tag! 
+Note: By default, browsers always place a line break before and after the <div> element.
+-->
+
+	<h2> Estrutura da página </h2>
+
+	<p style="text-align: center">
+		A estrutura básica do código fonte de uma página HTML 5, tem o formato exibido abaixo:
+	</p>
+	
+	<div class="horizontally_centered" style="border: 1px solid green; max-width: 80%; color: white">
+		<span style="color: grey">&#60;!-- Tudo entre estes identificadores são comentários (não influenciam a página) --&#62;</span><br><span style="color: grey">&#60;!-- O comando abaixo não é uma tag, ele informa ao navegador que é um documento do tipo HTML 5 --&#62;</span><br><span>&#60;!DOCTYPE html&#62;</span> <br><br><span style="color: grey">&#60;!-- A tag abaixo "html" é o container para todos os outros elementos HTML. Ela declara o <br>início da descrição de uma página. O atributo lang declara e informa aos mecanismos de busca e aos<br>navegadores qual a linguagem utilizada. --&#62;</span><br><span>&#60;html lang="pt-br"&#62;</span> <br><br><span style="color: grey">&#60;!-- A tag head é um container para meta dados (definições como título, conjunto de caracteres,<br>estilos (css) e scripts (javascript)). --&#62;</span><br><span>&#60;head&#62;</span><br><br>&emsp;<span style="color: grey">&#60;!-- A tag title especifica o título da página, que é mostrado na aba do navegador.<br>&emsp;O título é de suma importância para os mecanismos de busca. --&#62;</span><br>&emsp;<span>&#60;title&#62;</span>Título da página<span>&#60;/title&#62;</span><br><br><span>&#60;/head&#62;</span><br><br><span style="color: grey">&#60;!-- A tag body define o corpo do documento e comporta todos os elementos necessários à página. --&#62;</span><br><span>&#60;body&#62;</span><br><br>&emsp;<span style="color: grey">&#60;!-- A tag h1 é um cabeçalho de importância 1 (maior importância) --&#62;</span><br>&emsp;<span>&#60;h1&#62;</span>Cabeçalho<span>&#60;/h1&#62;</span><br><br>&emsp;<span style="color: grey">&#60;!-- A tag p define um parágrafo, e contém algumas propriedades de margem e indentação. --&#62;</span><br>&emsp;<span>&#60;p&#62;</span>Parágrafo<span>&#60;/p&#62;</span><br><br><span>&#60;/body&#62;</span><br><br><span>&#60;/html&#62;</span>
+	</div>
+
+	<p class="organized_text">
+		Coloque o código acima num editor de texto de sua preferência, salve com o formato ".html" e
+		abra a página num navegador (na maioria dos sistemas operacionais é só abrir o arquivo).
+	</p>
+
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+	
+	<h2> Containers </h2>
+
+	<p class="organized_text"> Em HTML, <i>containers</i> são áreas delimitadas por tags, e são utilizados para organização	e posicionamento de elementos internos (incluindo outros <i>containers</i>) e de si mesmos na página. Um parágrafo é um container, que contém suas propriedades de estilo, bem como a "caixa preta" que você visualiza cada seção desta página. Um exemplo de uma página simples e bem estruturada por <i>containers</i> e suas tags pode ser visualizada no link abaixo:</p>
+	<p style="text-align: center;">
+		<span>&#x3C;a href=&#x22;containers.html&#x22;&#x3E;</span> 
+		<a href="containers.html"> Formato de P&#xE1;gina </a> <span>&#x3C;/a&#x3E;</span>
+	</p>
+
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+
+	<h2> Textos e Parágrafos </h2>
+
+	<p class="organized_text">
+		Em HTML os textos podem ser inseridos sem nenhuma tag ou dentro de tags de formatação de texto como parágrafos, seções, <i>span</i>, entre outros. Textos puros (sem estarem dentro de uma tag de formatação) não possuem margem ou <i>padding</i> (ver a sessão de CSS) definidos, sua indentação e espaçamentos entre as linhas superiores e abaixo são definidos pelas propriedades de estilo internas do <i>container</i> onde o texto se localiza. As quebras de linha são inseridas automaticamente ao chegar no final do <i>container</i>, ou podem ser inseridas manualmente utilizando-se a tag &lt;br&gt;. Observe o exemplo abaixo:
+	</p>
+
+	Texto puro, sem nenhuma tag. Quebra de linha: <span>&lt;br&gt;</span> <br>
+	Nova linha, após a tag "break line" (br).
+	<p> <span>&lt;p&gt;</span> Texto com parágrafo. (Observe as margens acima e abaixo) <span>&lt;/p&gt;</span> </p>
+	Após o parágrafo (sem tag de formatação)<span>.</span>
+	Após este ponto amarelo, foi dada uma quebra de linha no editor (veja o código fonte), mas não é visualizada no navegador, pois não chegou no final do <i>container</i> nem foi forçada uma quebra de linha.
+	<!-- 
+	The <p> tag defines a paragraph. Browsers automatically add a single blank line before and after each <p> element.
+	Tip: Use CSS to style paragraphs.
+	-->
+
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+
+	<h2> Tamanhos de títulos, ou <i>headings</i> (cabeçalhos) </h2>
+
+	<h1> <span>&lt;h1&gt;</span> (cabeçalho de importância 1) <span>&lt;/h1&gt;</span> </h1>
+	<h2 id='normal_h2'> <span>&lt;h2&gt;</span> (cabeçalho de importância 2) <span>&lt;/h2&gt;</span> </h2>
+	<h3> <span>&lt;h3&gt;</span> (cabeçalho de importância 3) <span>&lt;/h3&gt;</span> </h3>
+	<h4> <span>&lt;h4&gt;</span> (cabeçalho de importância 4) <span>&lt;/h4&gt;</span> </h4>
+	<h5> <span>&lt;h5&gt;</span> (cabeçalho de importância 5) <span>&lt;/h5&gt;</span> </h5>
+	<h6> <span>&lt;h6&gt;</span> (cabeçalho de importância 6) <span>&lt;/h6&gt;</span> </h6>
+	Cada título já funciona como um parágrafo "&lt;p&gt;&lt;/p&gt;"<br>
+	<!-- 
+	The <h1> to <h6> tags are used to define HTML headings.
+	<h1> defines the most important heading. <h6> defines the least important heading.
+	Note: Only use one <h1> per page - this should represent the main heading/subject for the whole page. 
+	Also, do not skip heading levels - start with <h1>, then use <h2>, and so on. 
+	-->
+
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+
+	<h2> Formatação de textos </h2>
+
+	<div style="display: table; margin-left: auto; margin-right: auto; width: 90%">
+	<!-- TABLE -->
+		<div style="display: table-row;">
+		<!-- TABLE ROW -->
+			<div style="display: table-cell; text-align: center">
+			<!-- TABLE CELL -->
+				<h3 class="brasil_h3"> Formatos (HTML) </h3>
+				<p>
+					<span>&#x3C;mark&#x3E;</span> <mark> Texto grifado</mark> <span>&#x3C;/mark&#x3E;&#x3C;br&#x3E;</span> <br>
+				    <b> <span>&#x3C;b&#x3E;</span> Texto em negrito <span>&#x3C;/b&#x3E;&#x3C;br&#x3E;</span> </b><br>
+				    <strong> <span>&#x3C;strong&#x3E;</span> Texto em negrito <span>&#x3C;/strong&#x3E;</span> </strong><br>
+				    <i> <span>&#x3C;i&#x3E;</span> Texto em it&#xE1;lico <span>&#x3C;/i&#x3E;&#x3C;br&#x3E;</span> </i><br>
+				    <em> <span>&#x3C;em&#x3E;</span> Texto em it&#xE1;lico <span>&#x3C;/em&#x3E;&#x3C;br&#x3E;</span> </em><br>
+				    <u> <span>&#x3C;u&#x3E;</span> Texto sublinhado <span>&#x3C;/u&#x3E;&#x3C;br&#x3E;</span> </u><br>
+				    <sub> <span>&#x3C;sub&#x3E;</span> Texto subscrito <span>&#x3C;/sub&#x3E;&#x3C;br&#x3E;</span> </sub><br>
+				    <sup> <span>&#x3C;sup&#x3E;</span> Texto sobrescrito <span>&#x3C;/sup&#x3E;&#x3C;br&#x3E;</span> </sup><br>
+				    <small> <span>&#x3C;small&#x3E;</span> Texto com fonte menor do que o padr&#xE3;o <span>&#x3C;/small&#x3E;&#x3C;br&#x3E;</span> </small><br>
+				    <big> <span>&#x3C;big&#x3E;</span> Texto com fonte maior do que o padr&#xE3;o <span>&#x3C;/big&#x3E;&#x3C;br&#x3E;</span> </big><br>
+				</p>
+
+			</div>
+
+			<div style="display: table-cell; text-align: center; max-width: 350px;">
+			<!-- TABLE CELL -->
+				<h3 class="brasil_h3"> Família de Fontes (CSS) </h3>
+				<p> <span>&#x3C;p&#x3E;</span> Default Font (monospace) <span>&#x3C;/p&#x3E;</span> </p>
+				<p style="font-family: Arial"> <span>&#x3C;p style=&#x22;font-family: Arial&#x22;&#x3E;</span> Fonte Arial <span>&#x3C;/p&#x3E;</span> </p>
+				<p style="font-family: Courier"> <span>&#x3C;p style=&#x22;font-family: Courier&#x22;&#x3E;</span> Fonte Courier <span>&#x3C;/p&#x3E;</span> </p>
+				<p style="color: lightgreen"> Possibilitando duas fontes: </p> 
+				<p style="font-family: 'Comic Sans MS', Purisa;"> <span>&#x3C;p style=&#x22;font-family: 'Comic Sans MS', Purisa&#x22;&#x3E;</span> Fonte Purisa <span>&#x3C;/p&#x3E;</span> </p>
+				<p style="color: red; font-size: 13px;"> *Ao selecionar 2 ou mais fontes, caso uma não possa ser
+				carregada no sistema (como a Comic Sans em Linux ou Purisa no Windows), a seguinte será
+				carregada. </p>
+				<!-- 
+				The font-family property specifies the font for an element. The font-family property can hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font. There are two types of font family names:
+					> family-name - The name of a font-family, like "times", "courier", "arial", etc.
+					> generic-family - The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
+				Start with the font you want, and always end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.
+				Note: Separate each value with a comma.
+				Note: If a font name contains white-space, it must be quoted. Single quotes must be used when using the "style" attribute in HTML.
+				-->
+			</div>
+			<!-- END TABLE CELL -->
+		</div>
+		<!-- END TABLE ROW -->
+	</div>
+	<!-- END TABLE -->
+</div>
+<!-- 
+The table based formatting style of divs is a good choice, as it is easy to use and ensures positioning in the case of page resizing.
+-->
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div" style="text-align: center;">
+
+	<h2> Imagens </h2>
+
+	<p> 
+		Para adicionar uma imagem à página, utilize a tag img. Por exemplo: <br>
+		<span>
+			&#x3C;img src=&#x22;Imagens/matrixcode.jpg&#x22; width=&#x22;600&#x22; height=&#x22;300&#x22; alt=&#x22;matrix&#x22;&#x3E;
+		</span>
+	</p> 
+	<img src="Imagens/matrixcode.jpg" width="40%" height="30%" alt="matrix" style="border: 1px solid green;">
+	<p>
+		Para adicionar uma imagem como plano de fundo (da página, ou de qualquer container), <br>
+		deve-se	utilizar o css: <span>background-image: url("caminho/até/a/imagem.jpg");</span>
+	</p>
+	<!-- 
+	The <img> tag is used to embed an image in an HTML page.
+	Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image.
+	The <img> tag has two required attributes:
+	src - Specifies the path to the image
+	alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed
+	Note: Also, always specify the width and height of an image. If width and height are not specified, the page might flicker while the image loads.
+	Tip: To link an image to another document, simply nest the <img> tag inside an <a> tag (see example below). 
+	-->
+
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+
+	<h2> Listas </h2>
+	<!-- HTML lists allow web authors to group a set of related items in lists. -->
+	<div style="display: table; margin-left: auto; margin-right: auto; width: 90%">
+
+		<div style="display: table-row;"> 
+
+			<div style="display: table-cell; padding: 2class="brasil_h3 5%; /*border: 2px solid red;*/">
+				<br>
+				<h3 class="brasil_h3"> Ordenadas </h3>
+
+				<span>&#x3C;ol&#x3E;</span>
+				<ol> 
+				<li> <span>&#x3C;li&#x3E;</span> Primeiro elemento <span>&#x3C;/li&#x3E;</span> </li>
+				<li> <span>&#x3C;li&#x3E;</span> Segundo elemento <span>&#x3C;/li&#x3E;</span> </li>
+				<li> <span>&#x3C;li&#x3E;</span> Terceiro elemento <span>&#x3C;/li&#x3E;</span> </li>
+				</ol>
+				<span>&#x3C;/ol&#x3E;</span>
+
+			</div>
+
+			<div style="display: table-cell; padding: 0 0 0 2%; /*border: 2px solid green;*/">
+				
+				<h3 class="brasil_h3"> De Descrição </h3>
+
+				<span>&#x3C;dl&#x3E;</span>
+				<dl> 
+				<dt> <span>&#x3C;dt&#x3E;</span> Nome do termo 1 <span>&#x3C;/dt&#x3E;</span> </dt>
+				<dd> <span>&#x3C;dd&#x3E;</span> Descrição 1 do termo 1 <span>&#x3C;/dd&#x3E;</span> </dd>
+				<dd> <span>&#x3C;dd&#x3E;</span> Descrição 2 do termo 1 <span>&#x3C;/dd&#x3E;</span> </dd>
+				<dt> <span>&#x3C;dt&#x3E;</span> Nome do termo 2 <span>&#x3C;/dt&#x3E;</span> </dt>
+				<dd> <span>&#x3C;dd&#x3E;</span> Descrição 1 do termo 2 <span>&#x3C;/dd&#x3E;</span> </dd>
+				<dd> <span>&#x3C;dd&#x3E;</span> Descrição 2 do termo 2 <span>&#x3C;/dd&#x3E;</span> </dd>
+				</dl>
+				<span>&#x3C;/dl&#x3E;</span>
+
+			</div>
+
+			<div style="display: table-cell; padding-left: 5%; /*border: 2px solid blue;*/">
+				<br>
+				<h3 class="brasil_h3"> Desordenadas </h3>
+
+				<span>&#x3C;ul&#x3E;</span>
+				<ul>
+				<li> <span>&#x3C;li&#x3E;</span> Primeiro elemento <span>&#x3C;/li&#x3E;</span> </li>
+				<li> <span>&#x3C;li&#x3E;</span> Segundo elemento <span>&#x3C;/li&#x3E;</span> </li>
+				<li> <span>&#x3C;li&#x3E;</span> Terceiro elemento <span>&#x3C;/li&#x3E;</span> </li>
+				</ul>
+				<span>&#x3C;/ul&#x3E;</span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+
+	<h2> Links </h2>
+
+	<p class="organized_text"> Links (referências) para outras páginas podem ser inseridos com a tag &#x3C;a&#x3E;seguida do nome que deseja que apareça, conforme o exemplo abaixo: </p>
+	<p style="text-align: center;">
+		<span> &#x3C;a href=&#x22;https://www.google.com.br/&#x22; target=&#x22;_blank&#x22;&#x3E; </span>
+		<a href="https://www.google.com.br/" target="_blank"> Google </a> 
+		<span>&#x3C;/a&#x3E;&#x3C;br&#x3E; </span> <br>
+		<small style="color: red"> *O atributo (target = "_blank") faz com que a página seja aberta numa nova 
+		aba." </small>
+	</p>
+	<!-- 
+	HTML links are hyperlinks.
+	You can click on a link and jump to another document.
+	Hyperlinks are defined with the HTML <a> tag
+	The target attribute specifies where to open the linked document.
+	_blank	Opens the linked document in a new window or tab 
+	-->
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+
+	<h2> Tabelas </h2>
+
+	<p class="organized_text">
+		Para definir uma tabela em HTML, utiliza-se a tag &#x3C;table&#x3E;. Para definir uma linha, utiliza-se
+		&#x3C;tr&#x3E;, para células em negrito (de cabeçalho) a tag &#x3C;th&#x3E; e, por fim, para as 
+		células normais, a tag &#x3C;td&#x3E;. É possível fazer com que uma célula ocupe 2 ou mais linhas, bem
+		como 2 ou mais colunas, utilizando os atributos "rowspan" e "colspan", respectivamente. Para mais detalhes,
+		visualize o código fonte da tabela abaixo:
+	</p>
+
+	<div style="margin-left: auto; margin-right: auto; width: 30%">
+		
+		<style>
+			table {
+				width: 100%;
+				color: black;
+				border: 2px solid gray;
+				/*border-collapse: collapse;*/
+			}
+			td, th {text-align: center;}
+			tr:nth-child(even) {background-color: #dddddd;}
+			tr:nth-child(odd) {background-color: gray;}
+		</style>
+
+		<p>
+			<table>
+
+				<tr> <th></th> <th> col 1 </th> <th> col 2 </th> <th colspan="2"> col 3 </th> </tr>
+				<tr> <th> row 1 </td><td> 0,0 </td> <td> 0,1 </td> <td> 0,2 </td> <td> 0,2 </td> </tr>
+				<tr> <th> row 2 </td><td> 1,0 </td> <td> 1,1 </td> <td> 1,2 </td> </tr>
+				<tr> <th rowspan="2"> row 3 </th> <td> 2,0 </td> <td> 2,1 </td> <td> 2,2 </td> <td> 2,3 </td> </tr>
+				<tr> <td> 3,0 </td> <td> 3,1 </td> <td> 3,2 </td> <td> 3,3 </td> </tr>
+
+			</table>
+			<!-- 
+			An HTML table is defined with the <table> tag. Each table row is defined with the <tr> tag. A table header is defined with the <th> tag. By default, table headings are bold and centered. A table data/cell is defined with the <td> tag.
+			-->
+		</p>
+
+	</div>
+
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div">
+
+	<h2> Símbolos ASCII </h2>
+	<p class="organized_text">
+		Ao escrever os textos com conteúdo de uma página, as vezes é necessário utilizar alguns símbolos ASCII
+		como "&#x3C;", "&#174;", ou "&#223;". No entanto, além de os símbolos "&#x3C;" e "&#38;" serem <a href="https://www.html.am/reference/html-special-characters.cfm" target="_blank"> 
+		caracteres reservados</a> para o html (ao inserí-los no código fonte da página, o browser interpreta como um comando, não como um símbolo de texto), as vezes é difícil encontrar o símbolo para inserir na página. Portanto, alguns sites fornecem uma tabela com o código HTML para inserir, em formato de texto, o símbolo. Por exemplo, para inserir na página o símbolo &#x3C;, devemos colocar, no código fonte, a sequência &#38;#x3C. No link abaixo é possível visualizar uma tabela com alguns destes.
+	</p>
+	<p style="text-align: center;">
+		<a href="symbols.html" style="text-align: center;"> Tabela de símbolos ASCII com código HTML </a>
+	</p>
+
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div" style="text-align: center;">
+
+	<h2> CSS (Cascading Style Sheets) </h2>
+
+	<p class="organized_text">
+		
+		CSS (Cascading Style Sheets ou Folhas de Estilo Cascata) é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em HTML ou em XML. Isto é, adiciona estilo (cores, fontes, posicionamento, espaçamento, efeitos, etc.) a um documento web. Existem 3 maneiras de adicionar estilo a um documento Web com CSS: <br><br>
+		&emsp;1. Aplicando diretamente na tag: 
+		<span> &#60;span style="color: red; font-weight: bold"&#62; <span style="color: red; font-weight: bold"> Texto vermelho e negrito </span> &#60;/span&#62; </span>;<br>
+		&emsp;2. Utilizando a tag <span>&#60;style&#62;</span> e inserindo o css dentro da tag;<br>
+		&emsp;3. Importando o estilo de um arquivo ".css", utilizando a tag <span>&#60;link rel="stylesheet" href="arquivocss.css"&#62;</span>.
+
+	</p>
+
+	<p class="organized_text">
+		Para aprender mais sobre estilos CSS, verifique o código fonte desta página e das relacionadas, ou inspecione os elementos que desejar. Esta página utiliza as 3 maneiras de inserção de estilo. O código do arquivo ".css" desta página possui comentários explicativos, e a maioria dos comandos CSS tem o identificador (nome) autoexplicativo. O código pode ser acessado no link abaixo:
+	</p>
+
+	<p>
+		<a href="style.css" target="_blank"> Arquivo CSS </a><br>
+		<small style="color: red"> *É válido ressaltar que os comentários em CSS são definidos dentro dos caracteres "/*" e "*/" </small>
+	</p>
+
+	<p>
+		
+	</p>
+	
+</div>
+
+<hr>
+
+<footer id="rodape">
+	&#169; Site desenvolvido por Gabriel Furtado Lins Melo.
+</footer>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+</body>
+</html>
+
+<!-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Appendix:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+=> Global Attributes:
+
+	accesskey: Specifies a shortcut key to activate/focus an element
+	class: Specifies one or more classnames for an element (refers to a class in a style sheet)
+	contenteditable: Specifies whether the content of an element is editable or not
+	data-*: Used to store custom data private to the page or application
+	dir: Specifies the text direction for the content in an element
+	draggable: Specifies whether an element is draggable or not
+	dropzone: Specifies whether the dragged data is copied, moved, or linked, when dropped
+	hidden: Specifies that an element is not yet, or is no longer, relevant
+	id: Specifies a unique id for an element
+	lang: Specifies the language of the element's content
+	spellcheck: Specifies whether the element is to have its spelling and grammar checked or not
+	style: Specifies an inline CSS style for an element
+	tabindex: Specifies the tabbing order of an element
+	title: Specifies extra information about an element
+	translate: Specifies whether the content of an element should be translated or not
+
+=> Global Event Attributes:
+
+- Window Event Attributes:
+Events triggered for the window object (applies to the <body> tag):
+
+	Attribute 		Value 	Description
+	onafterprint	script	Script to be run after the document is printed
+	onbeforeprint	script	Script to be run before the document is printed
+	onbeforeunload	script	Script to be run when the document is about to be unloaded
+	onerror			script	Script to be run when an error occurs
+	onhashchange	script	Script to be run when there has been changes to the anchor part of the a URL
+	onload			script	Fires after the page is finished loading
+	onmessage		script	Script to be run when the message is triggered
+	onoffline		script	Script to be run when the browser starts to work offline
+	ononline		script	Script to be run when the browser starts to work online
+	onpagehide		script	Script to be run when a user navigates away from a page
+	onpageshow		script	Script to be run when a user navigates to a page
+	onpopstate		script	Script to be run when the window's history changes
+	onresize		script	Fires when the browser window is resized
+	onstorage		script	Script to be run when a Web Storage area is updated
+	onunload		script	Fires once a page has unloaded (or the browser window has been closed)
+
+- Form Events:
+Events triggered by actions inside a HTML form (applies to almost all HTML elements, but is most used in form elements):
+
+	Attribute		Value	Description
+	onblur			script	Fires the moment that the element loses focus
+	onchange		script	Fires the moment when the value of the element is changed
+	oncontextmenu	script	Script to be run when a context menu is triggered
+	onfocus			script	Fires the moment when the element gets focus
+	oninput			script	Script to be run when an element gets user input
+	oninvalid		script	Script to be run when an element is invalid
+	onreset			script	Fires when the Reset button in a form is clicked
+	onsearch		script	Fires when the user writes something in a search field (for <input="search">)
+	onselect		script	Fires after some text has been selected in an element
+	onsubmit		script	Fires when a form is submitted
+
+- Keyboard Events:
+
+	Attribute		Value	Description
+	onkeydown		script	Fires when a user is pressing a key
+	onkeypress		script	Fires when a user presses a key
+	onkeyup			script	Fires when a user releases a key
+
+- Mouse Events:
+
+	Attribute		Value	Description
+	onclick			script	Fires on a mouse click on the element
+	ondblclick		script	Fires on a mouse double-click on the element
+	onmousedown		script	Fires when a mouse button is pressed down on an element
+	onmousemove		script	Fires when the mouse pointer is moving while it is over an element
+	onmouseout		script	Fires when the mouse pointer moves out of an element
+	onmouseover		script	Fires when the mouse pointer moves over an element
+	onmouseup		script	Fires when a mouse button is released over an element
+	onmousewheel	script	Deprecated. Use the onwheel attribute instead
+	onwheel			script	Fires when the mouse wheel rolls up or down over an element
+
+- Drag Events:
+
+	Attribute		Value	Description
+	ondrag			script	Script to be run when an element is dragged
+	ondragend		script	Script to be run at the end of a drag operation
+	ondragenter		script	Script to be run when an element has been dragged to a valid drop target
+	ondragleave		script	Script to be run when an element leaves a valid drop target
+	ondragover		script	Script to be run when an element is being dragged over a valid drop target
+	ondragstart		script	Script to be run at the start of a drag operation
+	ondrop			script	Script to be run when dragged element is being dropped
+	onscroll		script	Script to be run when an element's scrollbar is being scrolled
+
+- Clipboard Events:
+
+	Attribute		Value	Description
+	oncopy			script	Fires when the user copies the content of an element
+	oncut			script	Fires when the user cuts the content of an element
+	onpaste			script	Fires when the user pastes some content in an element
+
+- Media Events:
+Events triggered by medias like videos, images and audio (applies to all HTML elements, but is most 
+common in media elements, like <audio>, <embed>, <img>, <object>, and <video>).
+
+	Attribute		Value	Description
+	onabort			script	Script to be run on abort
+	oncanplay		script	Script to be run when a file is ready to start playing (when it has buffered enough to begin)
+	oncanplaythrough script	Script to be run when a file can be played all the way to the end without pausing for buffering
+	oncuechange		script	Script to be run when the cue changes in a <track> element
+	ondurationchange script	Script to be run when the length of the media changes
+	onemptied		script	Script to be run when something bad happens and the file is suddenly unavailable
+	onended			script	Script to be run when the media has reach the end (a useful event for messages like "thanks for listening")
+	onerror			script	Script to be run when an error occurs when the file is being loaded
+	onloadeddata	script	Script to be run when media data is loaded
+	onloadedmetadata script	Script to be run when meta data (like dimensions and duration) are loaded
+	onloadstart		script	Script to be run just as the file begins to load before anything is actually loaded
+	onpause			script	Script to be run when the media is paused either by the user or programmatically
+	onplay			script	Script to be run when the media is ready to start playing
+	onplaying		script	Script to be run when the media actually has started playing
+	onprogress		script	Script to be run when the browser is in the process of getting the media data
+	onratechange	script	Script to be run each time the playback rate changes
+	onseeked		script	Script to be run when the seeking attribute is set to false indicating that seeking has ended
+	onseeking		script	Script to be run when the seeking attribute is set to true indicating that seeking is active
+	onstalled		script	Script to be run when the browser is unable to fetch the media data for whatever reason
+	onsuspend		script	Script to be run when fetching the media data is stopped before it is completely loaded for whatever reason
+	ontimeupdate	script	Script to be run when the playing position has changed
+	onvolumechange	script	Script to be run each time the volume is changed which (includes setting the volume to "mute")
+	onwaiting		script	Script to be run when the media has paused but is expected to resume
+
+- Misc Events
+	Attribute		Value	Description
+	ontoggle		script	Fires when the user opens or closes the <details> element
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Link tag Attributes:
+__________________________________________
+Attribute   | Value         | Description
+__________________________________________
+            |               | Specifies
+            |               | how the
+            |               | element
+            |               | handles
+            |               | cross-
+            |anonymous      | origin
+crossorigin |use-credentials| requests
+__________________________________________
+            |               |Specifies
+            |               |the location
+            |               |of the
+            |               |linked
+href        |  URL          |document
+__________________________________________
+            |               | Specifies
+            |               | the
+            |               | language
+            |               | of the text
+            |               | in the
+            |               | linked
+hreflang    | language_code | document
+__________________________________________
+            |               | Specifies
+            |               | on what
+            |               | device the
+            |               | linked
+            |               | document
+            |               | will be
+media       |  media_query  | displayed
+__________________________________________
+            |   no-referrer |
+            |   no-referrer-|
+            |   when-       | Specifies
+            |   downgrade   | which
+            |   origin      | referrer to
+            |   origin-when-| use when
+            |   cross-origin| fetching the
+referrerpolicy| unsafe-url  | resource
+__________________________________________
+            |  alternate    |
+            |   author      |
+            |   dns-prefetch|
+            |  help         |
+            |   icon        |
+            |   license     | Required.
+            |   next        | Specifies
+            |   pingback    | the
+            |  preconnect   | relationship
+            |   prefetch    | between
+            |  preload      | the current
+            |  prerender    | document
+            |   prev        | and the
+            |   search      | linked
+rel         |   stylesheet  | document
+__________________________________________
+            |               | Specifies
+            |               | the size of
+            |               | the linked
+            |               | resource.
+            |  HeightxWidth |Only for
+sizes       |   any         | rel="icon"
+__________________________________________
+            |               | Defines a
+            |               | preferred
+            |               | or an
+            |               | alternate
+title       |               | stylesheet
+__________________________________________
+            |               | Specifies
+            |               | the media
+            |               | type of the
+            |               | linked
+type        |  media_type   | document
+__________________________________________
+
+-->

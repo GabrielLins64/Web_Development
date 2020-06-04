@@ -3,11 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<title> Tabela de símbolos ASCII e seus códigos HTML </title>
-	<link rel="stylesheet" href="style.css">
-	<!-- 
-	The <link> tag defines the relationship between the current document and an external resource. The <link> tag is most often used to link to external style sheets. The <link> element is an empty element, it contains attributes only.
-	*The link tag attributes can be seen in the end of this file.
-	-->
+	<style>
+            body {
+                  background-color: #2a2a2a;
+                  color: #7FFF00;
+                  }
+            div {
+                  text-align: center;
+                  height: auto;
+                  width: auto; 
+                  background-color: black; 
+                  margin: auto;
+                  padding: 20px;
+                  border: 3px solid gold;
+                  border-radius: 8px;
+                  position: absolute;
+            }
+            table {
+                  margin: auto;
+                  width: 30%;
+                  color: black;
+            }
+            td, th {text-align: center;}
+            tr:nth-child(even) {background-color: #dddddd;}
+            tr:nth-child(odd) {background-color: gray;}
+      </style>
+	
 </head>
 <body>
 	<div>
@@ -38,87 +59,3 @@
 	</div>
 </body>
 </html>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-<!-- 
-Link tag Attributes:
-__________________________________________
-Attribute   | Value         | Description
-__________________________________________
-            |               | Specifies
-            |               | how the
-            |               | element
-            |               | handles
-            |               | cross-
-            |anonymous      | origin
-crossorigin |use-credentials| requests
-__________________________________________
-            |               |Specifies
-            |               |the location
-            |               |of the
-            |               |linked
-href        |  URL          |document
-__________________________________________
-            |               | Specifies
-            |               | the
-            |               | language
-            |               | of the text
-            |               | in the
-            |               | linked
-hreflang    | language_code | document
-__________________________________________
-            |               | Specifies
-            |               | on what
-            |               | device the
-            |               | linked
-            |               | document
-            |               | will be
-media       |  media_query  | displayed
-__________________________________________
-            |   no-referrer |
-            |   no-referrer-|
-            |   when-       | Specifies
-            |   downgrade   | which
-            |   origin      | referrer to
-            |   origin-when-| use when
-            |   cross-origin| fetching the
-referrerpolicy| unsafe-url  | resource
-__________________________________________
-            |  alternate    |
-            |   author      |
-            |   dns-prefetch|
-            |  help         |
-            |   icon        |
-            |   license     | Required.
-            |   next        | Specifies
-            |   pingback    | the
-            |  preconnect   | relationship
-            |   prefetch    | between
-            |  preload      | the current
-            |  prerender    | document
-            |   prev        | and the
-            |   search      | linked
-rel         |   stylesheet  | document
-__________________________________________
-            |               | Specifies
-            |               | the size of
-            |               | the linked
-            |               | resource.
-            |  HeightxWidth |Only for
-sizes       |   any         | rel="icon"
-__________________________________________
-            |               | Defines a
-            |               | preferred
-            |               | or an
-            |               | alternate
-title       |               | stylesheet
-__________________________________________
-            |               | Specifies
-            |               | the media
-            |               | type of the
-            |               | linked
-type        |  media_type   | document
-__________________________________________
-
--->
