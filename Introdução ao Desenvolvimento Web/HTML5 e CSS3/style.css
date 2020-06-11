@@ -18,7 +18,7 @@ External stylesheets are stored in CSS files
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* The selector below its an element selector. It will edit the style
-   of all tags of the same kind (<hr>, in this case) on HTML file. */
+	of all tags of the same kind (<hr>, in this case) on HTML file. */
 
 hr { 
 	border: 0px; /* Making the thematic breaks invisible */
@@ -106,15 +106,26 @@ a:visited {color: purple;} /* Visited link color */
 	right: 50%;
 	transform: translate(-50%, 0);
 }
+.clearfix::after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+   *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML += '<div class="ie7-clear"></div>' );
+}
+.ie7-clear {
+    display: block;
+    clear: both;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* The selectors below, starting with a hashtag (#), stands for ids */
 /* Id's are unique elements. That is, each element can have only one ID and
-   each page can have only one element with that ID. */
+	each page can have only one element with that ID. */
 /* A tag can call an id by using <tag id="brasil_header">, for instance. */
 
 #brasil_header {
-	height: auto;
+	height: 200px;
 	width: 50%; 
 	background-color: darkgreen; 
 	margin: 10px auto 10px auto; 
