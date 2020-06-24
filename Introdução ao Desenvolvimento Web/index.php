@@ -2,13 +2,15 @@
 
 $pagina = 'home';
 
-if(isset($_GET['i'])){
+if(isset($_GET['i']))
+{
 	$pagina = addslashes($_GET['i']);
 }
 
 include 'HTML5 e CSS3/header.html';
 
-switch ($pagina) {
+switch ($pagina) 
+{
 	case 'home':
 		include 'home.html';
 		break;
