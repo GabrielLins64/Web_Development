@@ -7,7 +7,7 @@ if(isset($_GET['i']))
 	$pagina = addslashes($_GET['i']);
 }
 
-include 'HTML5 e CSS3/header.html';
+include 'HTML5 e CSS3/head.html';
 
 switch ($pagina) 
 {
