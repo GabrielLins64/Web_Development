@@ -144,8 +144,8 @@ a:visited {color: purple;} /* Visited link color */
 
 #brasil_header {
 	height: 150px;
-	width: 45%;
-	min-width: 400px;
+	width: 47%;
+	min-width: 440px;
 	background-color: darkgreen; 
 	margin: 10px auto 10px auto; 
 	/*text-align: center;*/
