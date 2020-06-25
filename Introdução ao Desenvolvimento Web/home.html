@@ -1,16 +1,28 @@
 <script>
 	headerText("Introdução ao<br>Desenvolvimento Web");
+	sideBarButton("Topo", "brasil_header");
+	sideBarButton("Sobre", "sob");
+	sideBarButton("Como utilizar", "com");
+	sideBarButton("Referências", "ref");
+	document.getElementById('sidebar').style.top = "35%";
 </script>
 
 <hr>
-<div class="brasil_div" style="text-align: center;">
+<div class="brasil_div" style="text-align: center;" id="sob">
+	<h2> Sobre </h2>
+	<p>
+		
+	</p>
+</div>
+<hr>
+<div class="brasil_div" style="text-align: center;" id="com">
 	<h2> Como utilizar </h2>
 	<p>
 		Escolha um dos botões do menu acima ("HTML5 e CSS3", "JavaScipt" ou "PHP") e comece a aprender!
 	</p>
 </div>
 <hr>
-<div class="brasil_div" style="text-align: center">
+<div class="brasil_div" style="text-align: center" id="ref">
 	<h2> Referências e mais informações </h2>
 	<p class="organized_text">
 		O W3Schools é um site de desenvolvedores da Web, com tutoriais e referências em linguagens de desenvolvimento Web, como HTML, CSS, JavaScript, PHP, SQL, Python, jQuery, Java, C ++, C #, React, Node.js, XML, W3.CSS e Bootstrap, cobrindo a maioria dos aspectos da programação web. Muita informação e tutoriais podem ser adquiridos lá. Acesse no link abaixo:
