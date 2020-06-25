@@ -26,6 +26,10 @@ switch ($pagina)
 	case 'php':
 		include 'PHP/php_index.html';
 		break;
+
+	case 'mysql':
+		include 'MySQL/mysql_index.html';
+		break;
 	
 	default:
 		include 'home.html';
