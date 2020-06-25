@@ -117,17 +117,6 @@ a:visited {color: purple;} /* Visited link color */
     display: block;
     clear: both;
 }
-.sidebar {
-	width: 13%;
-	position: fixed;
-	margin: 2%;
-	padding: 5px;
-	top: 45%;
-	text-align: center;
-	background-color: black;
-	border: 2px solid green;
-	border-radius: 8px;
-}
 .glowing_green {
 	color: #00FF00;
 	text-align: center;
@@ -148,7 +137,6 @@ a:visited {color: purple;} /* Visited link color */
 	min-width: 440px;
 	background-color: darkgreen; 
 	margin: 10px auto 10px auto; 
-	/*text-align: center;*/
 	padding: 5px 5px 5px 5px;
 	border: 3px solid gold;
 	border-radius: 32px;
@@ -161,6 +149,44 @@ a:visited {color: purple;} /* Visited link color */
 	font-weight: 1000;
 	margin: 2% 0 0 0;
 	text-shadow: 0px 0px 3px white;
+}
+#sidebar {
+	position: -webkit-sticky;
+    position: sticky;
+    float: left;
+    top: 15%;
+    width: 13%;
+	background-color: black;
+	border: 2px solid green;
+	border-radius: 8px;
+	text-align: center;
+	margin: 2%;
+	padding: 5px;
+	font-size: 1.3vw; /* Responsive text */
+}
+#sidebar p {
+	margin: 5px;
+}
+#sidebar button {
+	border: 1px solid #00FF00;
+	border-radius: 10px;
+	padding: 2px 2% 2px 2%;
+	margin: 0 1% 0 1%;
+	text-decoration: none; /* Remove underlines */
+	background-color: black;
+	color: #00FF00;
+	font-weight: bold;
+	width: 80%;
+	font-size: 1.3vw;
+}
+#sidebar button:hover {
+	background-color: #00FF00;
+	color: black;
+	border: 1px solid #00FF00;
+	cursor: pointer;
+}
+#sidebar button:focus {
+	outline: 0;
 }
 #normal_h2 {
 	color: #00FF00;
