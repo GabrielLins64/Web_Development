@@ -1,6 +1,8 @@
 <script>
 	headerText("HTML 5 e CSS 3");
 	sideBarButton("Topo", "brasil_header");
+	sideBarButton("HTML", "htm");
+	sideBarButton("CSS", "css");
 	sideBarButton("Tags", "tag");
 	sideBarButton("Estrutura", "est");
 	sideBarButton("Containers", "con");
@@ -12,14 +14,59 @@
 	sideBarButton("Links", "lin");
 	sideBarButton("Tabelas", "tab");
 	sideBarButton("ASCII", "sim");
-	sideBarButton("CSS", "css");
+	checkScroll();
+	document.getElementById('sidebar').style.top = "13%";
 </script>
 
-<div class="brasil_div" id="tag">
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<div class="brasil_div" style="text-align: center;" id="htm">
+	
+	<h2> HTML </h2>
+
+	<p class="organized_text">
+		
+		HTML (<i>HyperText Markup Language</i> -- Linguagem de Marcação de Hipertexto) é uma linguagem de marcação (<span style="color: red">não de programação!</span>) utilizada para construir páginas Web.
+
+	</p>
+</div>
 <!-- 
 The <div> tag defines a division or a section in an HTML document. The <div> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript. The <div> tag is easily styled by using the class or id attribute. Any sort of content can be put inside the <div> tag! 
 Note: By default, browsers always place a line break before and after the <div> element.
 -->
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div" style="text-align: center;" id="css">
+
+	<h2> CSS (Cascading Style Sheets) </h2>
+
+	<p class="organized_text">
+		
+		CSS (Cascading Style Sheets ou Folhas de Estilo Cascata) é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em HTML ou em XML. Isto é, adiciona estilo (cores, fontes, posicionamento, espaçamento, efeitos, etc.) a um documento web. Existem 3 maneiras de adicionar estilo a um documento Web com CSS: <br><br>
+		&emsp;1. Aplicando diretamente na tag, com a propriedade <span style="color:yellow;">style</span>:<br>
+		<span> &#60;span style="color: red; font-weight: bold"&#62; <span style="color: red; font-weight: bold"> Texto vermelho e negrito </span> &#60;/span&#62; </span>;<br>
+		&emsp;2. Utilizando a tag <span>&#60;style&#62;</span> e inserindo o css dentro da tag;<br>
+		&emsp;3. Importando o estilo de um arquivo ".css", utilizando a tag:<br>
+		<span>&#60;link rel="stylesheet" href="arquivocss.css"&#62;</span>.
+
+	</p>
+
+	<p class="organized_text">
+		Para aprender mais sobre estilos CSS, verifique o código fonte desta página e das relacionadas, ou inspecione os elementos que desejar. Esta página utiliza as 3 maneiras de inserção de estilo. O código do arquivo ".css" desta página possui comentários explicativos, e a maioria dos comandos CSS tem o identificador (nome) autoexplicativo. O código pode ser acessado no link abaixo:
+	</p>
+
+	<p>
+		<a href="HTML5 e CSS3/style.css" target="_blank"> Arquivo CSS </a><br>
+		<small style="color: red"> *É válido ressaltar que os comentários em CSS são definidos dentro dos caracteres "/*" e "*/" </small>
+	</p>
+	
+</div>
+
+<hr>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<div class="brasil_div" id="tag">
 
 	<h2> Tags </h2>
 
@@ -367,33 +414,4 @@ The table based formatting style of divs is a good choice, as it is easy to use 
 		<a href="HTML5 e CSS3/symbols.html" style="text-align: center;"> Tabela de símbolos ASCII com código HTML </a>
 	</p>
 
-</div>
-
-<hr>
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-<div class="brasil_div" style="text-align: center;" id="css">
-
-	<h2> CSS (Cascading Style Sheets) </h2>
-
-	<p class="organized_text">
-		
-		CSS (Cascading Style Sheets ou Folhas de Estilo Cascata) é uma linguagem de estilo usada para descrever a apresentação de um documento escrito em HTML ou em XML. Isto é, adiciona estilo (cores, fontes, posicionamento, espaçamento, efeitos, etc.) a um documento web. Existem 3 maneiras de adicionar estilo a um documento Web com CSS: <br><br>
-		&emsp;1. Aplicando diretamente na tag: 
-		<span> &#60;span style="color: red; font-weight: bold"&#62; <span style="color: red; font-weight: bold"> Texto vermelho e negrito </span> &#60;/span&#62; </span>;<br>
-		&emsp;2. Utilizando a tag <span>&#60;style&#62;</span> e inserindo o css dentro da tag;<br>
-		&emsp;3. Importando o estilo de um arquivo ".css", utilizando a tag <span>&#60;link rel="stylesheet" href="arquivocss.css"&#62;</span>.
-
-	</p>
-
-	<p class="organized_text">
-		Para aprender mais sobre estilos CSS, verifique o código fonte desta página e das relacionadas, ou inspecione os elementos que desejar. Esta página utiliza as 3 maneiras de inserção de estilo. O código do arquivo ".css" desta página possui comentários explicativos, e a maioria dos comandos CSS tem o identificador (nome) autoexplicativo. O código pode ser acessado no link abaixo:
-	</p>
-
-	<p>
-		<a href="HTML5 e CSS3/style.css" target="_blank"> Arquivo CSS </a><br>
-		<small style="color: red"> *É válido ressaltar que os comentários em CSS são definidos dentro dos caracteres "/*" e "*/" </small>
-	</p>
-	
 </div>
