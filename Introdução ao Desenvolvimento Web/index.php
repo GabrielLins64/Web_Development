@@ -30,6 +30,10 @@ switch ($pagina)
 	case 'mysql':
 		include 'MySQL/mysql_index.html';
 		break;
+
+	case 'redes':
+		include 'Redes/redes_index.html';
+		break;
 	
 	default:
 		include 'home.html';
