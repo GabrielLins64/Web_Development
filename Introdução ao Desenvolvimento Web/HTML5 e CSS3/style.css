@@ -172,7 +172,7 @@ a:visited {color: purple;} /* Visited link color */
 #sidebar p {
 	margin: 5px;
 }
-#sidebar button {
+#sidebar button, .cool_btn {
 	border: 1px solid #00FF00;
 	border-radius: 10px;
 	padding: 2px 2% 2px 2%;
@@ -184,13 +184,13 @@ a:visited {color: purple;} /* Visited link color */
 	width: 80%;
 	font-size: 1.3vw;
 }
-#sidebar button:hover {
+#sidebar button:hover, .cool_btn:hover {
 	background-color: #00FF00;
 	color: black;
 	border: 1px solid #00FF00;
 	cursor: pointer;
 }
-#sidebar button:focus {
+#sidebar button:focus, .cool_btn:focus {
 	outline: 0;
 }
 #normal_h2 {
