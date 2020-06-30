@@ -39,7 +39,7 @@ function glowButton(id)
 	for(var i = 0, time=100; i < colors.length; i++, time+=100) {
 		doSetTimeout(colors[i], shadows[i], time);
 	};
-	return 150*colors.length;
+	return 150*colors.length; // Safe time to wait for this function to be executed
 }
 
 function sideBarButton(name, id)
