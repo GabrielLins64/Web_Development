@@ -5,6 +5,8 @@
 # tamente na página.
 # > Utilização: python ascii_to_html.py input_filename output_filename
 
+from collections import OrderedDict
+
 # ~~~~~~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~~~~~~
 # Para adicionar cores ao texto, ative a variável abaixo, e adicione
 # as tags que achar necessário:
@@ -29,7 +31,8 @@ tags = [
 
 import sys
 
-input_filename, output_filename = sys.argv[1], sys.argv[2]
+files_folder = "Conversions/"
+input_filename, output_filename = files_folder + sys.argv[1], files_folder + sys.argv[2]
 
 def loadtext(file):
 	f = open(file, "r")
@@ -37,13 +40,12 @@ def loadtext(file):
 	f.close()
 	return text
 
-keywords = {
-	"\t" : "&emsp;",
-	"&" : "&#38;",
-	"<" : "&#60;",
-	">" : "&#62;",
-	"\n" : "<br>",
-}
+keywords = OrderedDict()
+keywords['&'] = "&#38;"
+keywords['<'] = "&#60;"
+keywords['>'] = "&#62;"
+keywords['\t'] = "&emsp;"
+keywords['\n'] = "<br>"
 
 def span_color(color, text):
 	new_text = "<span style=\"color: " + color + "\">" + text
