@@ -2,16 +2,16 @@
 	headerText("JavaScript");
 	sideBarButton("Topo", "brasil_header");
 	sideBarButton("JavaScript", "jav");
-	sideBarButton("DOM", "dom");
 	sideBarButton("Variáveis", "var");
 	sideBarButton("Loops", "loo");
 	sideBarButton("Funções", "fun");
 	sideBarButton("Classes", "cla");
+	sideBarButton("DOM", "dom");
 	sideBarButton("Imports", "imp");
 	sideBarButton("Paralelismo", "par");
 	sideBarButton("JSON", "jso");
 	sideBarButton("Requests", "req");
-	sideBarButton("Query", "que");
+	sideBarButton("jQuery", "que");
 	sideBarButton("Transpilação", "tra");
 </script>
 
@@ -44,7 +44,7 @@
 		</p>
 		<div style="display: table; margin: auto; width: 80%; text-align: justify; text-indent: 4%">
 			<div style="display: table-cell; width: 40%;">
-				Para fazer um pequeno teste, insira o código ao lado em uma página HTML e execute para ver o resultado. Se desejar os efeitos do código nesta página, clique no botão "executar".
+				Para fazer um pequeno teste, insira o código ao lado em uma página HTML e execute para ver o resultado. Se desejar visualizar logo os efeitos do código nesta página, clique no botão "executar".
 				
 			</div>
 			<div style="display: table-cell; width: 5%"></div>
@@ -67,51 +67,54 @@
 
 <hr>
 
-<div class="brasil_div" id="dom">
-	<h2><i>Document Object Model</i> (DOM)</h2>
-	<p>
-		O <i>Document Object Model</i> (DOM) é uma API (<i>application programming interface</i>) para documentos HTML e XML. É uma representação em objetos da página web, que pode ser manipulada através da utilização de linguagens de programação, como o JavaScript.
-	</p>
-	<p>
-		Um exemplo de utilização da API DOM, é o uso do objeto <i>document</i> para obter, criar ou alterar elementos (e suas propriedades) da página. Concretizando ainda mais, como exemplo podemos modificar o HTML e o CSS de algum elemento da página, buscando-o pelo seu id (ou de outras maneiras). 
-	</p>
-	<div style="display: table; margin: auto; width: 80%; text-align: justify; text-indent: 4%;">
-			<div style="display: table-cell; width: 25%;">
-				Observe o código ao lado e faça seus experimentos em sua página teste.
-			</div>
-			<div style="display: table-cell; width: 5%"></div>
-			<div id="code1" style="display: table-cell; text-indent: 0; text-align: left; width: auto;">
-				<div style="border: 1px solid green; word-wrap: break-word;">
-					<span style="color: yellow">&#60;script&#62;</span><br>&emsp;var botao = document.getElementById("botao_executar_2");<br>&emsp;botao.onclick = function() {<br>&emsp;&emsp;botao.innerHTML = "Executado!";<br>&emsp;&emsp;botao.style.color = "red";<br>&emsp;};<br><span style="color: yellow">&#60;/script&#62;</span><br>
-				</div>
-				<p style="text-align: center; margin-top: 10px;">
-					<div style="display: table; width: 100%; text-align: center;">
-						<button id="botao_executar_2" class="cool_btn" style="display: table-cell; width: 45%">Executar</button>
-						<button  id="redo2" class="cool_btn" style="display: table-cell; width: 45%">Resetar</button>
-					</div>
-				</p>
-			</div>
-			<script>
-				var botao1 = document.getElementById("botao_executar_2");
-				var botao2 = document.getElementById("redo2");
-				var originalHTML = botao1.innerHTML;
-				var originalColor = botao1.style.color;
-				botao1.onclick = function() {
-					botao1.innerHTML = "Executado!";
-					botao1.style.color = "red";
-				};
-				botao2.onclick = () => {
-					botao1.innerHTML = originalHTML;
-					botao1.style.color = originalColor;
-				}
-			</script>
-		</div>
-</div>
-
-<hr>
-
 <div class="brasil_div" id="var">
-	<h2>Variáveis e Arrays</h2>
+	<h2>Variáveis</h2>
+	<p>
+		Por padrões de comunidade, escreve-se os identificadores em JavaScript com <span>camelCase</span>. Para se declarar uma variável em JavaScript, pode-se usar um destes 3 tipos de palavras reservadas:
+		<div style="width: 80%;" class="horizontally_centered">
+			<ol>
+				<li><span>var</span>: Declara uma variável.</li>
+				<li><span>let</span>: Declara uma variável local (escopo de bloco)</li>
+				<li><span>const<span style="color:red">*</span></span>: Declara uma constante (utilizada apenas para leitura)</li>
+			<span style="color: red;"><small>*Constantes em JS não podem ser reatribuídas, no entanto, objetos constantes podem ter suas propriedades modificadas.</small></span>
+			</ol>
+		</div><br>
+		<p>
+			Exemplo: <span>var <span style="color: pink">identificadorDaVariavel</span> = <span style="color: lightblue">32</span>;</span>
+		</p>
+	</p>
+	<h2>Tipos de Dados</h2>
+	<p>
+		Na versão mais recente do JavaScript, há 7 tipos de dados. Os <span>primitivos</span>: <span style="color: lightblue"> Booleans, null, undefined, Number (engloba inteiros, ponto flutuantes e dupla precisão), String e Symbol (suas instâncias são imutáveis)</span>. E o tipo <span style="color: lightblue">Object (o qual pode ser instanciado sem necessariamente pertencer a uma classe).</span>
+	</p>
+	<h2>Arrays</h2>
+	<p>
+		Arrays em JavaScript são declarados de forma similar ao <i>Python</i> (com exceção da palavra reservada de variável no início). Arrays possuem vários métodos embutidos que facilitam sua manipulação, você pode visualizá-los neste <a href="https://www.w3schools.com/js/js_array_methods.asp" target="_blank">link</a>.
+		<br>Ex.: <span>var <span style="color: pink">identificadorDoArray</span> = [<span style="color: lightblue">"Dado 1"</span>, <span style="color: lightblue">64</span>, <span style="color: lightblue">true</span>];</span>
+	</p>
+	<div style="width: 80%; position: relative;" class="horizontally_centered">
+		<div style="width: 45%; float: left; text-indent: 4%; text-align: justify;">
+			No código ao lado vamos criar alguns tipos de dados em variáveis e mandar um "<i>alert</i>" printar um array que irá conter tais variáveis.
+		</div>
+		<div style="margin-left: 50%;">
+			<div style="border: 1px solid green; word-wrap: break-word;">
+				<span style="color: yellow">&#60;script&#62;</span><br>&emsp;var variavel = "String";<br>&emsp;const numero = 100;<br>&emsp;let bool = true;<br>&emsp;let array = [variavel, numero, bool];<br>&emsp;alert(array);<br><span style="color: yellow">&#60;/script&#62;</span>
+			</div>
+			<div style="width: 100%; text-align: center; margin-top:10px">
+				<button id="exec2" class="cool_btn" style="width: 30%">Executar</button>
+			</div>
+		</div>
+		<span style="clear: left; display: block;"></span>
+		<script>
+			document.getElementById("exec2").onclick = function () {
+				var variavel = "String";
+				const numero = 100;
+				let bool = true;
+				let array = [variavel, numero, bool];
+				alert(array);
+			};
+		</script>
+	</div>
 </div>
 
 <hr>
@@ -130,6 +133,55 @@
 
 <div class="brasil_div" id="cla">
 	<h2>Classes e objetos</h2>
+</div>
+
+<hr>
+
+<div class="brasil_div" id="dom">
+	<h2><i>Document Object Model</i> (DOM)</h2>
+	<p>
+		O <i>Document Object Model</i> (DOM) é uma API (<i>application programming interface</i>) para documentos HTML e XML. É uma representação em objetos da página web, que pode ser manipulada através da utilização de linguagens de programação, como o JavaScript.
+	</p>
+	<p>
+		Um exemplo de utilização da API DOM, é o uso do objeto <i>document</i> para obter, criar ou alterar elementos (e suas propriedades) da página. Concretizando ainda mais, como exemplo podemos modificar o HTML e o CSS de algum elemento da página, buscando-o pelo seu id (ou de outras maneiras). 
+	</p>
+	<div style="width: 80%; position: relative;" class="horizontally_centered">
+		<div style="width: 20%; float: left; text-indent: 4%; text-align: justify;">
+			Observe o código ao lado e faça seus experimentos em sua página teste.
+		</div>
+		<div style="margin-left: 25%;">
+			<div style="border: 1px solid green; word-wrap: break-word;">
+				<span style="color: yellow">&#60;script&#62;</span><br>&emsp;var botao = document.getElementById("botao_executar");<br>&emsp;botao.onclick = function() {<br>&emsp;&emsp;botao.innerHTML = "Executado!";<br>&emsp;&emsp;botao.style.color = "red";<br>&emsp;};<br><span style="color: yellow">&#60;/script&#62;</span><br>
+			</div>
+			<p style="text-align: center; margin-top: 10px;">
+				<div style="display: table; width: 100%; text-align: center;">
+					<button id="exec6" class="cool_btn" style="display: table-cell; width: 45%">Executar</button>
+					<button  id="redo6" class="cool_btn" style="display: table-cell; width: 45%">Resetar</button>
+				</div>
+			</p>
+		</div>
+		<span style="clear: left; display: block;"></span>
+		<script>
+			var botao1 = document.getElementById("exec6");
+			var botao2 = document.getElementById("redo6");
+			var originalHTML = botao1.innerHTML;
+			var originalColor = botao1.style.color;
+			botao1.onclick = function() {
+				botao1.innerHTML = "Executado!";
+				botao1.style.color = "red";
+			};
+			botao2.onclick = () => {
+				botao1.innerHTML = originalHTML;
+				botao1.style.color = originalColor;
+			}
+		</script>
+	</div>
+	<p>
+		Para saber mais sobre o DOM, seus objetos, propriedades e métodos, acesse sua documentação em:
+	</p>
+	<p style="text-align: center;">
+		<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" target="_blank">Document Object Model</a>
+	</p>
 </div>
 
 <hr>
@@ -159,7 +211,7 @@
 <hr>
 
 <div class="brasil_div" id="que">
-	<h2><i>Query</i></h2>
+	<h2><i>jQuery</i></h2>
 </div>
 
 <hr>
