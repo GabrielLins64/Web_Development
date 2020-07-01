@@ -78,6 +78,9 @@ a:visited {color: purple;} /* Visited link color */
 	color: black;
 	border: 1px solid #00FF00;
 }
+.menu a:active {
+	background-color: #AAFFAA;
+}
 .brasil_div {
 	width: 60%; /* Largura (manter percentual torna a página dinâmica no redimensionamento do browser) */ 
 	background-color: black; /* Cor do fundo (do div) */ 
@@ -192,6 +195,9 @@ a:visited {color: purple;} /* Visited link color */
 }
 #sidebar button:focus, .cool_btn:focus {
 	outline: 0;
+}
+#sidebar button:active, .cool_btn:active {
+	background-color: #AAFFAA;
 }
 #normal_h2 {
 	color: #00FF00;
