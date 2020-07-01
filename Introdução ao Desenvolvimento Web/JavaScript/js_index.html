@@ -1,7 +1,7 @@
 <script>
 	headerText("JavaScript");
 	sideBarButton("Topo", "brasil_header");
-	sideBarButton("Como inserir", "com");
+	sideBarButton("JavaScript", "jav");
 	sideBarButton("DOM", "dom");
 	sideBarButton("Variáveis", "var");
 	sideBarButton("Loops", "loo");
@@ -15,14 +15,97 @@
 	sideBarButton("Transpilação", "tra");
 </script>
 
-<div class="brasil_div" id="com">
-	<h2>Como inserir o JavaScript</h2>
+<style type="text/css">
+	p {
+		position: relative;
+		left: 50%;
+		right: 50%;
+		transform: translate(-50%, 0);
+		max-width: 80%;
+		text-align: justify;
+		text-indent: 4%;
+		margin-top: 0;
+	}
+</style>
+
+<div class="brasil_div" id="jav">
+	<div>
+		<h2>JavaScript</h2>
+		<p>
+			<img src="/HTML5 e CSS3/Imagens/jslogo.png" alt="JavaScript logo" width="100" height="100" style="float: right; margin-left: 15px; box-shadow: 0 0 10px yellow;">
+			JavaScript é uma linguagem de programação interpretada (o código fonte é diretamente executado por um interpretador), estruturada (paradigma de programação que enfoca na sequência, decisão e iteração) e de alto nível (com a sintaxe mais próxima da linguagem humana). É uma das principais ferramentas do desenvolvimento Web, e permite que páginas e aplicações Web sejam interativas. 
+			<p>Alguns exemplos da potencialidade do JavaScript, são: A funcionalidade do acesso rápido deste site; a animação de "brilhar" o div ao ser selecionado; a modificação e inserção dinâmica de textos e botões em cada página; etc. Se quiser, visualize <a href="JavaScript/functions.js" target="_blank">aqui</a> o código JavaScript importado por esta página.</p>
+		</p>
+	</div>
+	<div>
+		<h2>Inserindo na página</h2>
+		<p>
+			Para inserir o JavaScript numa página HTML, você pode importá-lo de um arquivo com a extensão ".js" utilizando a tag: <span>&#60;script <span style="color: lightblue">src=<span style="color: darkkhaki">"Caminho/Ate/O/arquivo.js"</span></span>&#62;</span><span>&#60;/script&#62;</span>. Ou então, utilize a tag <span>&#60;script&#62;</span> <span style="color:pink">e insira seu código javascript aqui dentro</span> <span>&#60;/script&#62;</span>.
+		</p>
+		<div style="display: table; margin: auto; width: 80%; text-align: justify; text-indent: 4%">
+			<div style="display: table-cell; width: 40%;">
+				Para fazer um pequeno teste, insira o código ao lado em uma página HTML e execute para ver o resultado. Se desejar os efeitos do código nesta página, clique no botão "executar".
+				
+			</div>
+			<div style="display: table-cell; width: 5%"></div>
+			<div id="code1" style="display: table-cell; width: 25%;text-indent: 0;">
+				<div style="border: 1px solid green;">
+					<span style="color: yellow">&#60;script&#62;</span><br>&emsp;alert("Hello World!");<br><span style="color: yellow">&#60;/script&#62;</span><br>
+				</div>
+				<p style="text-align: center; margin-top: 10px">
+					<button id="exec1" class="cool_btn">Executar</button>
+				</p>
+			</div>
+			<script>
+				document.getElementById("exec1").onclick = function() {
+					alert("Hello World!");
+				};
+			</script>
+		</div>
+	</div>	
 </div>
 
 <hr>
 
 <div class="brasil_div" id="dom">
-	<h2><i>Document Object Model<i> (DOM)</h2>
+	<h2><i>Document Object Model</i> (DOM)</h2>
+	<p>
+		O <i>Document Object Model</i> (DOM) é uma API (<i>application programming interface</i>) para documentos HTML e XML. É uma representação em objetos da página web, que pode ser manipulada através da utilização de linguagens de programação, como o JavaScript.
+	</p>
+	<p>
+		Um exemplo de utilização da API DOM, é o uso do objeto <i>document</i> para obter, criar ou alterar elementos (e suas propriedades) da página. Concretizando ainda mais, como exemplo podemos modificar o HTML e o CSS de algum elemento da página, buscando-o pelo seu id (ou de outras maneiras). 
+	</p>
+	<div style="display: table; margin: auto; width: 80%; text-align: justify; text-indent: 4%;">
+			<div style="display: table-cell; width: 25%;">
+				Observe o código ao lado e faça seus experimentos em sua página teste.
+			</div>
+			<div style="display: table-cell; width: 5%"></div>
+			<div id="code1" style="display: table-cell; text-indent: 0; text-align: left; width: auto;">
+				<div style="border: 1px solid green; word-wrap: break-word;">
+					<span style="color: yellow">&#60;script&#62;</span><br>&emsp;var botao = document.getElementById("botao_executar_2");<br>&emsp;botao.onclick = function() {<br>&emsp;&emsp;botao.innerHTML = "Executado!";<br>&emsp;&emsp;botao.style.color = "red";<br>&emsp;};<br><span style="color: yellow">&#60;/script&#62;</span><br>
+				</div>
+				<p style="text-align: center; margin-top: 10px;">
+					<div style="display: table; width: 100%; text-align: center;">
+						<button id="botao_executar_2" class="cool_btn" style="display: table-cell; width: 45%">Executar</button>
+						<button  id="redo2" class="cool_btn" style="display: table-cell; width: 45%">Resetar</button>
+					</div>
+				</p>
+			</div>
+			<script>
+				var botao1 = document.getElementById("botao_executar_2");
+				var botao2 = document.getElementById("redo2");
+				var originalHTML = botao1.innerHTML;
+				var originalColor = botao1.style.color;
+				botao1.onclick = function() {
+					botao1.innerHTML = "Executado!";
+					botao1.style.color = "red";
+				};
+				botao2.onclick = () => {
+					botao1.innerHTML = originalHTML;
+					botao1.style.color = originalColor;
+				}
+			</script>
+		</div>
 </div>
 
 <hr>
